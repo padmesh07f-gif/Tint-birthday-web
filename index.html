@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Durdona</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: linear-gradient(135deg, #fbc2eb, #fcd6e6, #fff1f5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .container {
+        backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 25px;
+        padding: 45px 35px;
+        width: 380px;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255,255,255,0.3);
+        animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+        font-size: 26px;
+        color: #ff3f6c;
+        margin-bottom: 15px;
+    }
+
+    .line {
+        height: 2px;
+        width: 40px;
+        background: #ff6b8a;
+        margin: 10px auto 20px;
+        border-radius: 2px;
+    }
+
+    p {
+        font-size: 15px;
+        color: #444;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 22px;
+        border-radius: 30px;
+        border: none;
+        background: linear-gradient(135deg, #ff4d6d, #ff758f);
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+    }
+
+    #hidden {
+        opacity: 0;
+        margin-top: 18px;
+        color: #ff3f6c;
+        transition: 0.6s;
+    }
+
+    .show {
+        opacity: 1;
+    }
+
+    .floating {
+        position: absolute;
+        font-size: 18px;
+        animation: float 6s infinite ease-in-out;
+        opacity: 0.6;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="floating" style="top:10%; left:15%;">💗</div>
+<div class="floating" style="top:80%; left:70%;">💗</div>
+<div class="floating" style="top:50%; left:90%;">💗</div>
+
+<div class="container">
+    <h1>Durdona</h1>
+    <div class="line"></div>
+
+    <p>
+        I didn’t want to just text you something random…  
+        so I made this instead.
+    </p>
+
+    <p>
+        There’s just something about your presence that feels different.  
+        It’s calm, it’s real… and it stays.
+    </p>
+
+    <p>
+        No expectations, no pressure.  
+        Just something I wanted you to see.
+    </p>
+
+    <button onclick="reveal()">click?</button>
+
+    <p id="hidden">
+        You matter more than you think. 💗
+    </p>
+</div>
+
+<script>
+function reveal() {
+    document.getElementById("hidden").classList.add("show");
+}
+</script>
+
+</body>
+</html>
