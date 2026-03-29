@@ -1,3 +1,12 @@
+<div class="hearts">
+    <span>💗</span>
+    <span>💗</span>
+    <span>💗</span>
+    <span>💗</span>
+    <span>💗</span>
+</div>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,139 +14,126 @@
 <title>For Durdona</title>
 
 <style>
-    * {
+    body {
         margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+        font-family: sans-serif;
+        background: linear-gradient(180deg, #fff0f5, #ffd6e0);
+        color: #444;
     }
 
-    body {
-        height: 100vh;
-        background: linear-gradient(135deg, #fbc2eb, #fcd6e6, #fff1f5);
+    .intro {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
+        font-size: 42px;
+        color: #ff4d6d;
+        background: linear-gradient(180deg, #fff0f5, #ffd6e0);
+        z-index: 2;
+        text-align: center;
+        padding: 20px;
     }
 
-    .container {
-        backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.25);
-        border-radius: 25px;
-        padding: 45px 35px;
-        width: 380px;
+    .popup {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.7);
+        color: white;
+        padding: 10px 18px;
+        border-radius: 20px;
+        font-size: 16px;
+        z-index: 3;
+    }
+
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        bottom: -100%;
         text-align: center;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-        border: 1px solid rgba(255,255,255,0.3);
-        animation: fadeIn 1.5s ease;
+        padding: 60px 20px;
+        display: none;
     }
 
     h1 {
-        font-size: 26px;
-        color: #ff3f6c;
-        margin-bottom: 15px;
-    }
-
-    .line {
-        height: 2px;
-        width: 40px;
-        background: #ff6b8a;
-        margin: 10px auto 20px;
-        border-radius: 2px;
+        color: #ff4d6d;
+        margin-bottom: 40px;
+        font-size: 38px;
     }
 
     p {
-        font-size: 15px;
-        color: #444;
-        line-height: 1.7;
-        margin-bottom: 15px;
+        max-width: 750px;
+        margin: 25px auto;
+        line-height: 2;
+        font-size: 22px;
+        font-weight: 500;
     }
 
-    button {
-        margin-top: 15px;
-        padding: 10px 22px;
-        border-radius: 30px;
-        border: none;
-        background: linear-gradient(135deg, #ff4d6d, #ff758f);
-        color: white;
-        font-size: 14px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-    }
-
-    #hidden {
-        opacity: 0;
-        margin-top: 18px;
-        color: #ff3f6c;
-        transition: 0.6s;
-    }
-
-    .show {
-        opacity: 1;
-    }
-
-    .floating {
-        position: absolute;
-        font-size: 18px;
-        animation: float 6s infinite ease-in-out;
-        opacity: 0.6;
-    }
-
-    @keyframes float {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-20px); }
-        100% { transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
+    @keyframes scrollUp {
+        from { bottom: -120%; }
+        to { bottom: 120%; }
     }
 </style>
 </head>
 
 <body>
 
-<div class="floating" style="top:10%; left:15%;">💗</div>
-<div class="floating" style="top:80%; left:70%;">💗</div>
-<div class="floating" style="top:50%; left:90%;">💗</div>
+<div class="popup">wait for 2 seconds...</div>
 
-<div class="container">
-    <h1>Durdona</h1>
-    <div class="line"></div>
+<div class="intro" id="intro">
+    Happiest Birthday, Durdona 💗
+</div>
 
-    <p>
-        I didn’t want to just text you something random…  
-        so I made this instead.
-    </p>
+<div class="wrapper" id="content">
 
-    <p>
-        There’s just something about your presence that feels different.  
-        It’s calm, it’s real… and it stays.
-    </p>
+<h1>Happiest Birthday, Durdona 💗</h1>
 
-    <p>
-        No expectations, no pressure.  
-        Just something I wanted you to see.
-    </p>
+<p>I hope you stay happy for a long, long life.</p>
 
-    <button onclick="reveal()">click?</button>
+<p>I truly want to see you achieve all the success you dream of, and I want that smile to stay on your face forever.</p>
 
-    <p id="hidden">
-        You matter more than you think. 💗
-    </p>
+<p>I’ve never stood for anyone’s birthday before… but you are different. You are special to me.</p>
+
+<p>You’ve grown into a woman now, but somewhere in my heart, I still see the baby Durdona in you. Just… learn to think strong, think like a woman when life gets serious.</p>
+
+<p>I’m not good at giving gifts, but I made this for you. It might not be perfect. I didn’t have much, and I didn’t even have a proper place to keep things from falling low… but I promise, I would always try to lift it up.</p>
+
+<p>I will stand for you at any cost. That will never change.  
+But I know I can’t stand beside you anymore… and that’s something I have to accept.</p>
+
+<p>Even after all the fights, all the moments, I still wanted to stay. I really did. But sometimes, wanting is not enough.</p>
+
+<p>This might be the first and the last birthday I get to be with you… and I truly regret that.</p>
+
+<p>You are the kindest and sweetest person I have ever met. No matter what happens in life, that will never change.</p>
+
+<p>I hope you won’t forget me. I’ll always be someone who feels happy seeing you succeed. I’ll always be someone who would want to lift your face up when you’re down.</p>
+
+<p>You will never be alone. You have so many people who love you, care about you, worry about you… and yes, I’m one of them.</p>
+
+<p>My heart was never meant to hurt you. Even when things went wrong, that was never my intention.</p>
+
+<p>If you ever need comfort, come.  
+If you ever need a solution, come.  
+If you ever feel low, come.</p>
+
+<p>And even if I’m not beside you… I’ll still be there in some way.</p>
+
+<p><b>Don’t ever forget me.</b></p>
+
 </div>
 
 <script>
-function reveal() {
-    document.getElementById("hidden").classList.add("show");
-}
+    setTimeout(() => {
+        document.getElementById("intro").style.display = "none";
+        const content = document.getElementById("content");
+        content.style.display = "block";
+        content.style.animation = "scrollUp 140s linear forwards";
+    }, 2000);
 </script>
 
 </body>
